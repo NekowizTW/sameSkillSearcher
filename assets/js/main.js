@@ -122,6 +122,7 @@ async function init () {
 
     new TomSelect('#categorySelect', {
         options: data.map((item, idx) => ({value: idx, text: item[0].replace('-', ' | '), title: item[0].replace('-', ' | '), cnt: item[1]})),
+        maxOptions: 1000,
         render: {
             option: (data) => {
                 return `<div><span class="title">${data.title}</span><span class="cnt">共${data.cnt}張</span></div>`
