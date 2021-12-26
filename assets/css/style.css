@@ -1,0 +1,55 @@
+.content {
+    min-height: 70vh;
+}
+
+.footer {
+    text-align: center;
+}
+
+.ts-wrapper .option .title {
+	display: block;
+}
+.ts-wrapper .option .cnt {
+	font-size: 12px;
+	display: block;
+	color: #a0a0a0;
+}
+
+th:nth-child(1), td:nth-child(1), img {
+    width: 60px;
+    height: auto;
+    text-align: center;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 12em;
+}
+
+th:nth-child(3), td:nth-child(3),
+th:nth-child(4), td:nth-child(4),
+th:nth-child(5), td:nth-child(5) {
+    width: 20em;
+}
+
+.haifu, .tw {
+    display: inline-block;
+    margin-left: 0.25em;
+    width: 1.1em;
+    height: 1em;
+    line-height: 1em;
+    border-radius: 50%;
+    font-size: 0.9em;
+    text-align: center;
+    vertical-align: middle;
+    transform: translateY(-0.15em);
+}
+
+.haifu {
+    border: 1px solid red;
+    color: red;
+}
+
+.tw {
+    border: 1px solid blue;
+    color: blue;
+}
