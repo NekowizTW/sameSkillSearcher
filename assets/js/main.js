@@ -15,11 +15,11 @@ Object.byString = function(o, s) {
 }
 
 function genHead (filename) {
-    const randKey = Math.round(Math.random() * 4) + 1;
     const md5 = CryptoJS.MD5(filename).toString();
     const img = document.createElement('img');
 
-    img.src = `http://vignette${randKey}.wikia.nocookie.net/nekowiz/images/${md5.charAt(0)}/${md5.charAt(0)}${md5.charAt(1)}/${filename}/revision/latest?path-prefix=zh`;
+    img.src = `http://static.wikia.nocookie.net/nekowiz/images/${md5.charAt(0)}/${md5.charAt(0)}${md5.charAt(1)}/${filename}/revision/latest?path-prefix=zh`;
+    img.referrerPolicy = "no-referrer";
     return img;
 }
 
@@ -94,7 +94,7 @@ function generateTable (name, arr) {
 }
 
 async function init () {
-    const source = await fetch('https://nekowiztw.github.io/cardFinder/json/cardData.json').then(response => response.json());
+    const source = await fetch('https://nekowiztw.github.io/wikidata-sync/cards/cardData.json').then(response => response.json());
 
     const grouped = _.groupBy(source.card, card => `${card.as2Data.type}-${card.ss2Data.type}`);
 
